@@ -57,9 +57,7 @@ const HomeScreen = () => {
         } />
 
          {/*categories section */}
-        <Spacer height={30} />
-         <ItemHeader title='Categories'/>
-         <Spacer height={10} />
+         <ItemHeader title='Categories' marginTop={30} marginBottom={10}/>
          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollMargin} contentContainerStyle={styles.scrollPadding}>
           {categoryList.map((item,index)=>{
             return <TouchableOpacity key={index}>
@@ -75,9 +73,7 @@ const HomeScreen = () => {
          </ScrollView>
 
           {/*popular section */}
-          <Spacer height={30} />
-          <ItemHeader title='Popular' suffixText='View all' />
-          <Spacer height={10} />
+          <ItemHeader title='Popular' suffixText='View all' marginTop={30} marginBottom={10}/>
          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollMargin} contentContainerStyle={styles.scrollPadding}>
            <Card />
            <Card />
@@ -85,9 +81,7 @@ const HomeScreen = () => {
          </ScrollView>
 
           {/*Near by section */}
-          <Spacer height={30} />
-          <ItemHeader title='Near by' suffixText='View all' />
-          <Spacer height={10} />
+          <ItemHeader title='Near by' suffixText='View all' marginTop={30} marginBottom={10}/>
          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollMargin} contentContainerStyle={styles.scrollPadding}>
            <Card />
            <Card />
