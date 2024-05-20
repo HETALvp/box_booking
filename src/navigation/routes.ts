@@ -1,6 +1,8 @@
 export const routes = {
-    HOME : 'Home',
-    EXPLORE : 'Explore',
-    BOOKED : 'Booked',
-    PROFILE : 'Profile'
+    HOME : 'HomeScreen',
+    EXPLORE : 'ExploreScreen',
+    BOOKED : 'BookedScreen',
+    PROFILE : 'ProfileScreen',
+    BOTTOM_TAB : 'BottomTabBar',
+    DETAILS : 'DetailScreen'
 }

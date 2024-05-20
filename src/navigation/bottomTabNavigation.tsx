@@ -8,7 +8,6 @@ import ProfileScreen from '../screens/profileScreen';
 import FeatherIcons from 'react-native-vector-icons/Feather';
 import { AppColors } from '../theme/colors';
 import { routes } from './routes';
-import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import AntDesignIcons from 'react-native-vector-icons/AntDesign'
 import IonIcons from 'react-native-vector-icons/Ionicons'
 

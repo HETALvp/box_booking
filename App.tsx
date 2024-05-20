@@ -1,17 +1,20 @@
 import { NavigationContainer } from '@react-navigation/native'
 import * as React from 'react'
-
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import BookedScreen from './src/screens/bookedScreen';
-import ExploreScreen from './src/screens/exploreScreen';
-import HomeScreen from './src/screens/homeScreen';
-import ProfileScreen from './src/screens/profileScreen';
 import BottomTabNavigation from './src/navigation/bottomTabNavigation';
+import { createStackNavigator } from '@react-navigation/stack';
+import DetailScreen from './src/screens/detailScreen';
+import { routes } from './src/navigation/routes';
 
 const App = () => {
-  const Tab = createBottomTabNavigator();
+ 
+  const Stack = createStackNavigator();
   return <NavigationContainer>
- <BottomTabNavigation />
+<Stack.Navigator initialRouteName={routes.BOTTOM_TAB}>
+  <Stack.Screen name={routes.BOTTOM_TAB} options={{
+    headerShown:false
+  }} component={BottomTabNavigation} />
+  <Stack.Screen name={routes.DETAILS} component={DetailScreen}/>
+</Stack.Navigator>
   </NavigationContainer>
 }
 
