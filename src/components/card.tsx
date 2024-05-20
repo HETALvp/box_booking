@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { AppColors, windowHeight, windowWidth } from '../theme/colors'
 import RadiusContainer from './radiusContainer'
@@ -7,14 +7,16 @@ import ShadowContainer from './shadowContainer';
 
 interface Props {
     image?:string,
-    title: string,
+    title?: string,
     description?:string,
-    price: number
+    price?: number,
+    onPress: () => void
 }
 
-const Card = () => {
+const Card = ({onPress, }:Props) => {
   return (
     <ShadowContainer childern={
+      <TouchableOpacity onPress={onPress}>
         <View style={styles.container}>
     <Image source={require('../assets/box_cricket.jpeg')} style={styles.imageContainer} />
     <View style={{position: 'absolute', top:10, left:10}}>
@@ -38,6 +40,7 @@ const Card = () => {
             }/>
     </View>
   </View>
+  </TouchableOpacity>
     } />
   )
 }

@@ -50,6 +50,9 @@ const Title2Color = ({text,color}:Props) => {
 const Title3Color = ({text,color}:Props) => {
     return  <Text style={[styles.title3Style, color ? {color: color} : styles.color]} >{text}</Text>
 }
+const Title3ColorBold = ({text,color}:Props) => {
+    return  <Text style={[styles.title3StyleBold, color ? {color: color} : styles.color]} >{text}</Text>
+}
 const HeadlineColor = ({text, color}:Props) => {
     return <Text style={[styles.headlineStyle,color ? {color: color} : styles.color]} >{text}</Text>
 }
@@ -58,6 +61,9 @@ const BodyColor = ({text,color}:Props) => {
 }
 const CalloutColor = ({text,color}:Props) => {
     return  <Text style={[styles.calloutStyle, color ? {color: color} : styles.color]} >{text}</Text>
+}
+const CalloutColor800 = ({text,color}:Props) => {
+    return  <Text style={[styles.callout800Style, color ? {color: color} : styles.color]} >{text}</Text>
 }
 const SubHeadingColor = ({text,color}:Props) => {
     return  <Text style={[styles.subHeadingStyle, color ? {color: color} : styles.color]} >{text}</Text>
@@ -72,7 +78,7 @@ const Caption2Color = ({text,color}:Props) => {
     return  <Text style={[styles.caption2Style,color ? {color: color} : styles.color]} >{text}</Text>
 }
 
-export {Title1,Title2,Title3,Title1Color, Title2Color, Title3Color, Headline,HeadlineColor, Body,BodyColor,Callout,CalloutColor,SubHeading,SubHeadingColor, Caption1,Caption1Color,Caption2,Caption2Color,Callout800}
+export {Title1,Title2,Title3,Title1Color, Title2Color, Title3Color, Headline,HeadlineColor, Body,BodyColor,Callout,CalloutColor,SubHeading,SubHeadingColor, Caption1,Caption1Color,Caption2,Caption2Color,Callout800,CalloutColor800,Title3ColorBold}
 
 const styles = StyleSheet.create({
     color: {
@@ -89,6 +95,10 @@ const styles = StyleSheet.create({
     title3Style : {
         fontSize: 20,
         fontWeight: 'regular'
+    },
+    title3StyleBold : {
+        fontSize: 20,
+        fontWeight: 'bold'
     },
     headlineStyle : {
         fontSize: 17,

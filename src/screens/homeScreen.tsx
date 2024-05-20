@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { AppColors } from '../theme/colors'
 import FontAwesomeIcons from 'react-native-vector-icons/FontAwesome';
@@ -10,11 +10,14 @@ import { BodyColor, Callout800, Caption1Color, Caption2Color, Title1, Title3, Ti
 import ItemHeader from '../components/itemHeader';
 import Spacer from '../components/spacer';
 import ShadowContainer from '../components/shadowContainer';
+import { useNavigation } from '@react-navigation/native';
+import { routes } from '../navigation/routes';
+import { Root } from '../../App';
 
 
 const HomeScreen = () => {
   const [searchText, setSearchText] = useState<string>()
-
+  const navigation = useNavigation<Root>()
   const categoryList = ['Cricket', 'Pickle ball', 'Basket ball', 'Volley ball', 'Football', 'Lawn tennis', 'Table tennis']
 
   
@@ -75,17 +78,18 @@ const HomeScreen = () => {
           {/*popular section */}
           <ItemHeader title='Popular' suffixText='View all' marginTop={30} marginBottom={10}/>
          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollMargin} contentContainerStyle={styles.scrollPadding}>
-           <Card />
-           <Card />
-           <Card />
+         <Card onPress={()=> navigation.navigate(routes.DETAILS)}/>
+         <Card onPress={()=> navigation.navigate(routes.DETAILS)}/>
+         <Card onPress={()=> navigation.navigate(routes.DETAILS)}/>
          </ScrollView>
 
           {/*Near by section */}
           <ItemHeader title='Near by' suffixText='View all' marginTop={30} marginBottom={10}/>
          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scrollMargin} contentContainerStyle={styles.scrollPadding}>
-           <Card />
-           <Card />
-           <Card />
+           <Card onPress={()=> navigation.navigate(routes.DETAILS)}/>
+           <Card onPress={()=> navigation.navigate(routes.DETAILS)}/>
+           <Card onPress={()=> navigation.navigate(routes.DETAILS)}/>
+           
          </ScrollView>
          <Spacer height={30} />
          <Spacer height={30} />
