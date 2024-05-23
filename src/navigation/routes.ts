@@ -4,5 +4,6 @@ export const routes = {
     BOOKED : 'BookedScreen',
     PROFILE : 'ProfileScreen',
     BOTTOM_TAB : 'BottomTabBar',
-    DETAILS : 'DetailScreen'
+    DETAILS : 'DetailScreen',
+    BOOKING : 'BookingScreen'
 }

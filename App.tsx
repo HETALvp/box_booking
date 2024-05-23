@@ -30,7 +30,9 @@ const App = () => {
       <Stack.Screen name={'DetailScreen'} options={{
         headerShown: false
       }} component={DetailScreen} />
-      <Stack.Screen name={'BookingScreen'} component={BookingScreen} />
+      <Stack.Screen name={'BookingScreen'} options={{
+        headerShown: false
+      }} component={BookingScreen} />
     </Stack.Navigator>
   </NavigationContainer>
 }

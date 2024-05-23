@@ -13,6 +13,7 @@ import AppButton from '../components/appButton';
 import AppIcon, { IconProvider } from '../components/appIcon';
 import ShadowContainer from '../components/shadowContainer';
 import RadiusContainer from '../components/radiusContainer';
+import { routes } from '../navigation/routes';
 
 export interface AmenitiesData {
     name: string,
@@ -114,9 +115,11 @@ const DetailScreen = () => {
                         <Title1BoldColor text={`\u20b9750`} color='white' />
                         <BodyColor text='/hr' color='white' />
                     </View>
-                    <View style={styles.bookBtn}>
-                        <Title3Color text='Book now' color={AppColors.primaryColor} />
-                    </View>
+                    <TouchableOpacity onPress={() => navigation.navigate(routes.BOOKING)} >
+                        <View style={styles.bookBtn}>
+                            <Title3Color text='Book now' color={AppColors.primaryColor} />
+                        </View>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
