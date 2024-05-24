@@ -99,7 +99,8 @@ const styles = StyleSheet.create({
     },
     title1BoldStyle: {
         fontSize: 28,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        textAlign: 'center'
     },
     title2Style: {
         fontSize: 22,

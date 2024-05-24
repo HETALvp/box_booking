@@ -90,7 +90,9 @@ const DetailScreen = () => {
                         } />
                     </View>
                     <Spacer height={10} />
-                    <Title1Bold text='Box & Bounce' />
+                    <View style={styles.rowView} >
+                        <Title1Bold text='Box & Bounce' />
+                    </View>
                     <Spacer height={5} />
                     <View style={styles.locationContainer}>
                         <AppIcon icon='map-marker' iconProvider={IconProvider.fontAwesome5} color={AppColors.primaryColor} size={14} />
@@ -146,5 +148,6 @@ const styles = StyleSheet.create({
     bottomBarContainer: { backgroundColor: AppColors.primaryColor, borderTopLeftRadius: 25, borderTopRightRadius: 25, paddingHorizontal: 20, paddingTop: 20, paddingBottom: 40 },
     bottomBarStyle: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
     rateStyle: { flexDirection: 'row', alignItems: 'baseline', gap: 1 },
-    bookBtn: { borderRadius: 25, backgroundColor: 'white', paddingHorizontal: 50, paddingVertical: 10, alignItems: 'center', justifyContent: 'center' }
+    bookBtn: { borderRadius: 25, backgroundColor: 'white', paddingHorizontal: 50, paddingVertical: 10, alignItems: 'center', justifyContent: 'center' },
+    rowView: { justifyContent: 'flex-start', flexDirection: 'row' }
 })

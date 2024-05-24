@@ -102,7 +102,7 @@ export default HomeScreen
 
 const styles = StyleSheet.create({
   scrollContainer: { marginHorizontal: 10, marginTop: 10 },
-  scrollMargin: { marginHorizontal: -10 },
+  scrollMargin: { marginHorizontal: -10, },
   scrollPadding: { paddingHorizontal: 10 },
   searchContainer: { flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 8, marginVertical: 10 },
   locationContainer: {
