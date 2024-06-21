@@ -19,8 +19,27 @@ export type Root = {
   push: any
 }
 
-const App = () => {
+// const App = () => {
 
+//   const Stack = createStackNavigator<RootParamList>();
+//   return <NavigationContainer>
+//     <Stack.Navigator initialRouteName={'BottomTabBar'}>
+//       <Stack.Screen name={'BottomTabBar'} options={{
+//         headerShown: false
+//       }} component={BottomTabNavigation} />
+//       <Stack.Screen name={'DetailScreen'} options={{
+//         headerShown: false
+//       }} component={DetailScreen} />
+//       <Stack.Screen name={'BookingScreen'} options={{
+//         headerShown: false
+//       }} component={BookingScreen} />
+//     </Stack.Navigator>
+//   </NavigationContainer>
+// }
+
+// export default App;
+
+const AppAgain = () => {
   const Stack = createStackNavigator<RootParamList>();
   return <NavigationContainer>
     <Stack.Navigator initialRouteName={'BottomTabBar'}>
@@ -35,6 +54,7 @@ const App = () => {
       }} component={BookingScreen} />
     </Stack.Navigator>
   </NavigationContainer>
-}
+  // }
+};
 
-export default App;
+export default AppAgain;
